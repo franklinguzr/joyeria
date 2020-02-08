@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+  <context-param>
+    <param-name>javax.faces.PROJECT_STAGE</param-name>
+    <param-value>Development</param-value>
+  </context-param>
+
+  <servlet>
+    <servlet-name>Principal</servlet-name>
+    <servlet-class>controlador.Principal</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Nosotros</servlet-name>
+    <servlet-class>controlador.Nosotros</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Servicios</servlet-name>
+    <servlet-class>controlador.Servicios</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Contactenos</servlet-name>
+    <servlet-class>controlador.Contactenos</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>Principal</servlet-name>
+    <url-pattern>/principal</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Principal</servlet-name>
+    <url-pattern>/index</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Principal</servlet-name>
+    <url-pattern>/index.html</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Nosotros</servlet-name>
+    <url-pattern>/nosotros</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Nosotros</servlet-name>
+    <url-pattern>/nosotros.html</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Servicios</servlet-name>
+    <url-pattern>/servicios</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servicios</servlet-name>
+    <url-pattern>/servicios.html</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Contactenos</servlet-name>
+    <url-pattern>/contactenos</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Contactenos</servlet-name>
+    <url-pattern>/contactenos.html</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet-mapping>
+      <servlet-name>Faces Servlet</servlet-name>
+      <url-pattern>/faces/*</url-pattern>
+  </servlet-mapping>
+  <session-config>
+      <session-timeout>
+          30
+      </session-timeout>
+  </session-config>
+  <welcome-file-list>
+    <welcome-file>principal</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+    <res-ref-name>jdbc/Joyería</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+</web-app>
